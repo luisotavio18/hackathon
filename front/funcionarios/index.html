@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,43 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
+    <div class="quadrado-form">
+        <div class="container-form">
+            <form class="container-input">
 
-    <form>
-        
-        <label for="nome" class="nome_escrito">NOME:</label><br>
-        <input type="text" id="nome" name="nome" class="texto_email"><br>
+                <h1>cadastro de funcionarios</h1>
 
-        <label for="cpf" class="cpf_escrito">CPF:</label><br>
-        <input type="text" id="cpf" name="cpf" class="texto_email"><br>
+                <input type="text" id="nome" name="nome" placeholder="Nome">
 
-        <label for="endereco" class="endereco_escrito">ENDERECO:</label><br>
-        <input type="text" id="endereco" name="endereco" class="texto_email"><br>
+                <input type="text" id="cpf" name="cpf" placeholder="CPF">
 
-        <label for="credencial" class="credencial_escrito">CREDENCIAL:</label><br>
-        <input type="text" id="credencial" name="credencial" class="texto_credencial"><br>
+                <input type="text" id="endereco" name="endereco" placeholder="endereço">
 
-        <label for="cargo" class="cargo_escrito">CARGO:</label><br>
-        <input type="text" id="cargo" name="cargo" class="texto_cargo"><br><br>
+                <input type="text" id="credencial" name="credencial" placeholder="credencial">
 
-        <button onclick="cadastrar(event)" class="botao1">Registrar</button>
+                <input type="text" id="cargo" name="cargo" placeholder="cargo">
 
-    </form>
+                <button class="btn-register" onclick="cadastrar(event)" class="botao1">Registrar</button>
+              <h3 class="mensagem-de-cadastro"></h3>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        function cadastrar(event) {
+            event.preventDefault()
+            document.querySelector(".mensagem-de-cadastro").innerHTML="cadastro feito"
+        }
+
+
+   
+    </script>
 
 </body>
+
 </html>

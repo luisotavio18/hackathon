@@ -15,7 +15,13 @@ create table instrumentos(
 	nome varchar(255)
 );
 
-drop table instrumentos, funcionarios;
+create table categoriakits(
+	id int primary key auto_increment,
+	nome varchar(255)
+);
+
+drop table instrumentos, funcionarios, categoriakits;
 
 select * from funcionarios;
 select * from instrumentos;
+select * from categoriakits;
